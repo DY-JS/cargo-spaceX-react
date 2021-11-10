@@ -1,0 +1,33 @@
+.shipsInfo {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+
+  &__title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  &__list {
+    flex: 0 1 30%;
+    min-height: 250px;
+    max-height: 250px;
+    overflow-y: scroll;
+    margin: 0;
+    border: 1px solid #000;
+    list-style: none;
+    overflow-y: auto;
+    list-style: none;
+  }
+
+  &__item {
+    flex: 0 1 70%;
+    max-height: 50px;
+    overflow-y: scroll;
+    border: 1px solid #000;
+    list-style: none;
+    overflow-y: auto;
+  }
+}
