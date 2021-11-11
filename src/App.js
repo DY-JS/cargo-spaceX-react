@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header
+       <Header
       query={query}
        setQuery={setQuery}
        setShips={setShips}

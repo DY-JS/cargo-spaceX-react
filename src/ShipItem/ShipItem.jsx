@@ -7,7 +7,7 @@ const ShipItem = ({ ship, setSelectedId }) => {
       className="shipItem"
       key={ship.id}
       onClick={() => setSelectedId(ship.id)} //при клике всё пропадает!
-    >        
+    >
       {ship.name}
     </li>
   );
