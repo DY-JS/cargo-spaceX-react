@@ -6,7 +6,7 @@ const ShipItem = ({ ship, setSelectedId }) => {
     <li
       className="shipItem"
       key={ship.id}
-      onClick={() => setSelectedId(ship.id)} //при клике всё пропадает!
+      onClick={() => setSelectedId(ship.id)} 
     >
       {ship.name}
     </li>

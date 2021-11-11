@@ -5,7 +5,6 @@ import "./ShipsInfo.scss";
 
 const ShipsInfo = ({ ships }) => {
   const [selectedId, setSelectedId] = useState("");
-  //const [shipForDetails, setShipForDetails] = useState();
 
   let shipForDetails = ships.find((ship) => ship.id === selectedId) || null;
   //!shipExist ? - для основного массива не работает
