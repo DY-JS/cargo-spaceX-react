@@ -1,7 +1,7 @@
 import "./Header.scss";
-import cargoShips from "../cargoShips";
+import cargoShips from "../../cargoShips";
 
- const Header = ({setShips, query, setQuery, save}) => {
+ const Header = ({ships, query, setShips, setQuery, save}) => {
 
    return (
       <header className="header">
@@ -19,6 +19,7 @@ import cargoShips from "../cargoShips";
           <button
             type="button"
             name="load"
+            disabled={ships.length>0}
             className="header__btn"
             onClick={() => setShips(cargoShips)}
           >

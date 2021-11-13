@@ -22,12 +22,18 @@
     list-style: none;
   }
 
-  &__item {
-    flex: 0 1 70%;
-    max-height: 50px;
-    overflow-y: scroll;
-    border: 1px solid #000;
-    list-style: none;
-    overflow-y: auto;
+  &__link {
+    width: 100%;
+    min-height: 25px ;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    .active {
+      font-weight: 600;
+      color: rgb(228, 77, 102);
+      background-color: rgb(113, 195, 228);
+    }
   }
+
 }

@@ -4,11 +4,11 @@
   align-items: center;
   padding: 0 40px;
   height: 100px;
-  background-color: rgba(236, 240, 243, 0.7);
+  background-color: rgba(176, 204, 226, 0.7);
 
   &__title {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 600;
   }
 
   &__form {
@@ -75,10 +75,21 @@
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
+    color:#000; 
     transition: transform ease-in-out 0.3s;
 
     &:hover {
       transform: scale(1.1);
+      background: #ccc; 
+
+     &:active{
+       box-shadow: inset 2px 2px 1px rgba(0,0,0, .3);
+       background: rgb(160, 207, 153); 
+      }
+      
+      &:disabled{
+        cursor: not-allowed
+      }
     }
   }
 

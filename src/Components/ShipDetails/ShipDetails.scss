@@ -1,0 +1,20 @@
+.shipDetails {
+  flex: 0 1 70%;
+  min-height: 250px;
+  max-height: 250px;
+  padding-left: 20px;
+  overflow-y: scroll;
+  border: 1px solid #000;
+  list-style: none;
+  overflow-y: auto;
+
+  &__name {
+    font-size: 30px;
+  }
+
+  &__boxes {
+    width: 50%;
+    border: 1px solid #000;
+  }
+
+}
