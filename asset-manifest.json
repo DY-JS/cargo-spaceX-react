@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/cargo-spaceX-react/static/css/main.c2d521fe.chunk.css",
-    "main.js": "/cargo-spaceX-react/static/js/main.f4d4570a.chunk.js",
-    "main.js.map": "/cargo-spaceX-react/static/js/main.f4d4570a.chunk.js.map",
-    "runtime-main.js": "/cargo-spaceX-react/static/js/runtime-main.ec7009ea.js",
-    "runtime-main.js.map": "/cargo-spaceX-react/static/js/runtime-main.ec7009ea.js.map",
-    "static/js/2.87ab2940.chunk.js": "/cargo-spaceX-react/static/js/2.87ab2940.chunk.js",
-    "static/js/2.87ab2940.chunk.js.map": "/cargo-spaceX-react/static/js/2.87ab2940.chunk.js.map",
-    "static/js/3.a8536e15.chunk.js": "/cargo-spaceX-react/static/js/3.a8536e15.chunk.js",
-    "static/js/3.a8536e15.chunk.js.map": "/cargo-spaceX-react/static/js/3.a8536e15.chunk.js.map",
+    "main.css": "/cargo-spaceX-react/static/css/main.241121aa.chunk.css",
+    "main.js": "/cargo-spaceX-react/static/js/main.a89a66ae.chunk.js",
+    "main.js.map": "/cargo-spaceX-react/static/js/main.a89a66ae.chunk.js.map",
+    "runtime-main.js": "/cargo-spaceX-react/static/js/runtime-main.2bd37998.js",
+    "runtime-main.js.map": "/cargo-spaceX-react/static/js/runtime-main.2bd37998.js.map",
+    "static/js/2.64049ff0.chunk.js": "/cargo-spaceX-react/static/js/2.64049ff0.chunk.js",
+    "static/js/2.64049ff0.chunk.js.map": "/cargo-spaceX-react/static/js/2.64049ff0.chunk.js.map",
+    "static/js/3.0e93a70a.chunk.js": "/cargo-spaceX-react/static/js/3.0e93a70a.chunk.js",
+    "static/js/3.0e93a70a.chunk.js.map": "/cargo-spaceX-react/static/js/3.0e93a70a.chunk.js.map",
     "index.html": "/cargo-spaceX-react/index.html",
-    "static/css/main.c2d521fe.chunk.css.map": "/cargo-spaceX-react/static/css/main.c2d521fe.chunk.css.map",
-    "static/js/2.87ab2940.chunk.js.LICENSE.txt": "/cargo-spaceX-react/static/js/2.87ab2940.chunk.js.LICENSE.txt",
+    "static/css/main.241121aa.chunk.css.map": "/cargo-spaceX-react/static/css/main.241121aa.chunk.css.map",
+    "static/js/2.64049ff0.chunk.js.LICENSE.txt": "/cargo-spaceX-react/static/js/2.64049ff0.chunk.js.LICENSE.txt",
+    "static/media/pencil.d8ab0733.svg": "/cargo-spaceX-react/static/media/pencil.d8ab0733.svg",
     "static/media/Header.scss": "/cargo-spaceX-react/static/media/search.c7f1d9ef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec7009ea.js",
-    "static/js/2.87ab2940.chunk.js",
-    "static/css/main.c2d521fe.chunk.css",
-    "static/js/main.f4d4570a.chunk.js"
+    "static/js/runtime-main.2bd37998.js",
+    "static/js/2.64049ff0.chunk.js",
+    "static/css/main.241121aa.chunk.css",
+    "static/js/main.a89a66ae.chunk.js"
   ]
 }
