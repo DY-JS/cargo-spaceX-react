@@ -23,6 +23,10 @@
     @media (max-width: 780px) {
       font-size: 16px;
     }
+
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
   }
 
   &__bays {
@@ -36,15 +40,21 @@
   &__boxes {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
     margin-top: 0;
     padding-left: 5px;
+    font-size: 18px;
     border: 1px solid #000;
     border-radius: 3px;
 
     @media (max-width: 780px) {
-      width: 90%;
-      font-size: 16px;
+      width: 80%;
+      font-size: 14px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 12px;
+      width: 95%;
     }
   }
 
@@ -58,6 +68,10 @@
     @media (max-width: 780px) {
       width: 95%;
       font-size: 14px;
+    }
+
+    @media (max-width: 400px) {
+      height: 25px;
     }
 
     &:hover {
@@ -79,11 +93,15 @@
     border-radius: 4px;
     cursor: pointer;
 
+    @media (max-width: 400px) {
+      font-size: 12px;
+      line-height: 25px;
+    }
+
     &:focus {
       background: linear-gradient(180deg, #fff 0%, #f6f6f7 100%);
       border: 1px solid #e1e7ed;
       border-radius: 3px;
-      font-size: 20px;
       font-weight: 400;
     }
 
@@ -100,7 +118,7 @@
     margin-left: 10px;
     padding: 5px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     color:#fff;
     background-color: rgb(154, 84, 211);
