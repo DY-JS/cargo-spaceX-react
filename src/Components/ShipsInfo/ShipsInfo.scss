@@ -14,12 +14,17 @@
     flex: 0 1 30%;
     min-height: 250px;
     max-height: 250px;
+    padding-left: 20px;
     overflow-y: scroll;
     margin: 0;
     border: 1px solid #000;
     list-style: none;
     overflow-y: auto;
     list-style: none;
+
+    @media (max-width: 780px) {
+      padding-left: 10px;
+    }
   }
 
   &__link {
@@ -29,10 +34,18 @@
     font-weight: 400;
     line-height: 30px;
 
+  @media (max-width: 780px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+
     .active {
       font-weight: 600;
-      color: rgb(228, 77, 102);
-      background-color: rgb(113, 195, 228);
+      color: rgb(250, 248, 248);
+      background-color: rgb(154, 84, 211);
     }
   }
 

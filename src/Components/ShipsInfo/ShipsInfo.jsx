@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   NavLink,
   Route,
@@ -17,22 +17,23 @@ const handleUrl = (name) => {
     .join("");
 };
 
-const ShipsInfo = ({ query, ships }) => {
+const ShipsInfo = ({ query, sortedShips }) => {
   const [selectedId, setSelectedId] = useState("");
-  let shipForDetails = ships.find((ship) => ship.id === selectedId) || null;
+  let shipForDetails = sortedShips.find((ship) => ship.id === selectedId) || null;
 
-  if (!ships.length && query.length) {
+  if (!sortedShips.length && query.length) {
     return <p className="shipsInfo__title">No matсhes found</p>;
   }
 
-  if (!ships.length && !query.length) {
+  if (!sortedShips.length && !query.length) {
     return <p className="shipsInfo__title">Please load shipments</p>;
   }
+  
   return (
     <div className="shipsInfo">
       <Router>
         <ul className="shipsInfo__list">
-          {ships.map((ship) => (
+          {sortedShips.map((ship) => (
             <li
               key={ship.id}
               className="shipsInfo__link"
@@ -45,13 +46,15 @@ const ShipsInfo = ({ query, ships }) => {
           ))}
         </ul>
         <Routes>
-          {ships.map((ship) => (
+          {sortedShips.map((ship) => (
             <Route key={ship.id} path={`/${handleUrl(ship.name)}`} />
           ))}
           <Route path="*" element={() => <p>404</p>} />
         </Routes>
       </Router>
-      {shipForDetails ? <ShipDetails ship={shipForDetails} /> : null}
+      {shipForDetails 
+        ? <ShipDetails ship={shipForDetails} selectedId={selectedId}/>
+        : null}
     </div>
   );
 };

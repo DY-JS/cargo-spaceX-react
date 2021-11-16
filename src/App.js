@@ -3,6 +3,7 @@ import "./App.css";
 import "./Components/Header/Header";
 import ShipsInfo from "./Components/ShipsInfo/ShipsInfo";
 import Header from "./Components/Header/Header";
+import {ShipsContext} from "./Components/Context/ShipsContext";
 
 function App() {
   const lsKey = "ships";
@@ -20,16 +21,12 @@ function App() {
   );
 
   return (
+    <ShipsContext.Provider value={{ships, setShips, query, setQuery, save}}>
     <div className="app">
-      <Header
-        ships={ships}
-        query={query}
-        setQuery={setQuery}
-        setShips={setShips}
-        save={save}
-      />
-      <ShipsInfo query={query} ships={sortedShips} />
+      <Header/>
+      <ShipsInfo query={query} sortedShips={sortedShips} />
     </div>
+    </ShipsContext.Provider>
   );
 }
 

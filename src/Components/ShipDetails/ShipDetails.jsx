@@ -1,18 +1,44 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { ShipsContext } from "../Context/ShipsContext";
 import "./ShipDetails.scss";
+import pencil from "./pencil.svg";
 
 const calculateBays = (str) => {
-  return str
-    ? Math.ceil(
-        str
-          .split(",")
-          .map(Number)
-          .reduce((s, e) => s + e) / 10
-      )
-    : 0;
+  if(str) {
+  let res = Math.ceil(
+    str
+      .split(",")
+      .map(Number)
+      .reduce((s, e) => s + e) / 10
+  );
+  return isNaN(res) ? 0 : res;
+  }
+  return 0;
 };
 
-const ShipDetails = ({ ship }) => {
+const ShipDetails = ({ ship, selectedId }) => {
+  const { setShips } = useContext(ShipsContext);
+
+  const [editMode, setEditMode] = useState(false);
+  const [newQuantity, setNewQuantity] = useState(" ");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShips((currentShips) =>
+      currentShips.map((ship) => {
+        if (ship.id === selectedId ) {
+          return {
+            ...ship,
+            boxes: newQuantity,
+          };
+        }
+        return ship;
+      })
+    );
+    setNewQuantity("");
+    setEditMode(false);
+  };
+
   return (
     <div className="shipDetails">
       <p className="shipDetails__name">{ship?.name}</p>
@@ -20,7 +46,7 @@ const ShipDetails = ({ ship }) => {
         className="shipDetails__email"
         target="_blank"
         rel="noreferrer"
-        href={ship?.email}
+        href={`mailto:${ship?.email}`}
       >
         {ship?.email}
       </a>
@@ -30,7 +56,32 @@ const ShipDetails = ({ ship }) => {
           <b>{` ${calculateBays(ship.boxes)}`}</b>
         </span>
       </p>
-      <p className="shipDetails__boxes">{ship?.boxes || "No boxes"}</p>
+      <p>Cargo Boxes</p>
+      <form
+        type="submit"
+        className={editMode ? "shipDetails__form" : "shipDetails__hide"}
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="text"
+          className={editMode ? "shipDetails__input" : "shipDetails__hide"}
+          onChange={(e) => setNewQuantity(e.target.value)}
+          value={newQuantity}
+        />
+        <button type="submit" className="shipDetails__btn">
+          Confirm
+        </button>
+      </form>
+      <div className={!editMode ? "shipDetails__boxes" : "shipDetails__hide"}>
+        {ship?.boxes || "No boxes"}
+        <img
+          className={!editMode ? "shipDetails__icon" : "shipDetails__hide"}
+          src={pencil}
+          alt="edit"
+          title="Edit boxes"
+          onClick={() => setEditMode(true)}
+        />
+      </div>
     </div>
   );
 };

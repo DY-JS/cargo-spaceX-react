@@ -2,13 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
-  height: 100px;
+  padding: 20px 40px 0 40px ;
+  height: 90px;
   background-color: rgba(176, 204, 226, 0.7);
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+     align-items: center;
+     padding: 0 20px;
+     height: 120px;
+  }
 
   &__title {
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 5px;
+
+    @media (max-width: 780px) {
+      font-size: 25px;
+      font-weight: 500;
+    }
   }
 
   &__form {
@@ -16,6 +29,14 @@
     width: 40%;
     height: 40px;
     cursor: pointer;
+  
+    @media (max-width: 780px) {
+      width: 80%;
+      font-size: 20px;
+      height: 30px;
+      font-weight: 400;
+    }
+
 
     &::before {
       content: "";
@@ -26,6 +47,11 @@
       left: 14px;
       background: url("./search.svg") 0 / cover no-repeat;
       z-index: 2;
+
+      @media (max-width: 780px) {
+        top: 5px;
+      }
+    
     }
 
     &:hover {
@@ -75,13 +101,19 @@
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
-    color:#000; 
+    color:#fff;
+    background: rgb(74, 105, 173);
     transition: transform ease-in-out 0.3s;
+
+    @media (max-width: 780px) {
+      font-size: 16px;
+    }
 
     &:hover {
       transform: scale(1.1);
-      background: #ccc; 
-
+      background: rgb(136, 160, 211); 
+    }
+    
      &:active{
        box-shadow: inset 2px 2px 1px rgba(0,0,0, .3);
        background: rgb(160, 207, 153); 
@@ -90,7 +122,7 @@
       &:disabled{
         cursor: not-allowed
       }
-    }
+
   }
 
 }

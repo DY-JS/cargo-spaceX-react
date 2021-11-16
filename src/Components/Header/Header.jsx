@@ -1,8 +1,11 @@
+import React, {useContext} from 'react';
 import "./Header.scss";
 import cargoShips from "../../cargoShips";
+import {ShipsContext} from "../Context/ShipsContext";
 
- const Header = ({ships, query, setShips, setQuery, save}) => {
+const Header = () => {
 
+ const {ships, query, setShips, setQuery, save} = useContext(ShipsContext);
    return (
       <header className="header">
         <div className="header__title">Cargo Planner</div>
