@@ -20,7 +20,7 @@ const ShipDetails = ({ ship, selectedId }) => {
   const { setShips } = useContext(ShipsContext);
 
   const [editMode, setEditMode] = useState(false);
-  const [newQuantity, setNewQuantity] = useState(" ");
+  const [newQuantity, setNewQuantity] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,8 +65,10 @@ const ShipDetails = ({ ship, selectedId }) => {
         <input
           type="text"
           className={editMode ? "shipDetails__input" : "shipDetails__hide"}
-          onChange={(e) => setNewQuantity(e.target.value)}
+          placeholder="Enter quantity of boxes" 
           value={newQuantity}
+          onChange={(e) => setNewQuantity(e.target.value)}
+         
         />
         <button type="submit" className="shipDetails__btn">
           Confirm
@@ -87,3 +89,4 @@ const ShipDetails = ({ ship, selectedId }) => {
 };
 
 export default ShipDetails;
+
